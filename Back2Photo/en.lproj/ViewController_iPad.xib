@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="btnDistance" destination="58" id="79"/>
+                <outlet property="btnPhoto" destination="50" id="77"/>
+                <outlet property="imageDirection" destination="26" id="80"/>
+                <outlet property="imageOverlay" destination="21" id="81"/>
+                <outlet property="imagePhoto" destination="37" id="72"/>
+                <outlet property="txtDistance" destination="30" id="75"/>
+                <outlet property="txtDistanceMsg" destination="195" id="212"/>
+                <outlet property="txtGPSMsg" destination="217" id="226"/>
+                <outlet property="txtMagnetometerMsg" destination="221" id="227"/>
+                <outlet property="view" destination="2" id="3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="background_iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="13">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="825"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="overlay5_iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="21">
+                    <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                </imageView>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="arrow_iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="26">
+                    <rect key="frame" x="43" y="880" width="159" height="57"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="57" id="85"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Close for GPS Accuracy" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="195">
+                    <rect key="frame" x="441" y="963" width="299" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="299" id="206"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="0.52734921950000002" blue="0.60367276160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="--- ----" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30">
+                    <rect key="frame" x="253" y="833" width="495" height="151"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="495" id="35"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="48"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" alpha="0.019999999552965164" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50" userLabel="Button Photo">
+                    <rect key="frame" x="20" y="14" width="723" height="806"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="806" id="73"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPressedPhoto:" destination="-1" eventType="touchUpInside" id="76"/>
+                    </connections>
+                </button>
+                <button opaque="NO" alpha="0.019999999552965164" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="58" userLabel="Button Distance">
+                    <rect key="frame" x="253" y="833" width="490" height="151"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="490" id="63"/>
+                        <constraint firstAttribute="height" constant="151" id="66"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="btnPressedDistance:" destination="-1" eventType="touchUpInside" id="78"/>
+                    </connections>
+                </button>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="GPS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="217">
+                    <rect key="frame" x="260" y="963" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="220"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.36159726949999998" green="0.86734693880000002" blue="0.38748050769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Compass" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="221">
+                    <rect key="frame" x="28" y="963" width="193" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="193" id="225"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.36159726949999998" green="0.86734693880000002" blue="0.38748050769999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="13" firstAttribute="top" secondItem="2" secondAttribute="top" id="17"/>
+                <constraint firstItem="13" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="20"/>
+                <constraint firstItem="21" firstAttribute="top" secondItem="2" secondAttribute="top" id="24"/>
+                <constraint firstItem="21" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="25"/>
+                <constraint firstAttribute="trailing" secondItem="30" secondAttribute="trailing" constant="20" symbolic="YES" id="33"/>
+                <constraint firstItem="37" firstAttribute="top" secondItem="2" secondAttribute="top" id="44"/>
+                <constraint firstItem="37" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="46"/>
+                <constraint firstItem="37" firstAttribute="trailing" secondItem="2" secondAttribute="trailing" id="48"/>
+                <constraint firstItem="58" firstAttribute="leading" secondItem="30" secondAttribute="leading" id="59"/>
+                <constraint firstItem="58" firstAttribute="top" secondItem="37" secondAttribute="bottom" constant="8" symbolic="YES" id="61"/>
+                <constraint firstAttribute="bottom" secondItem="58" secondAttribute="bottom" constant="20" symbolic="YES" id="62"/>
+                <constraint firstItem="50" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="20" symbolic="YES" id="67"/>
+                <constraint firstItem="50" firstAttribute="top" secondItem="2" secondAttribute="top" constant="14" id="69"/>
+                <constraint firstItem="30" firstAttribute="top" secondItem="37" secondAttribute="bottom" constant="8" symbolic="YES" id="82"/>
+                <constraint firstAttribute="bottom" secondItem="30" secondAttribute="bottom" constant="20" symbolic="YES" id="84"/>
+                <constraint firstItem="26" firstAttribute="centerY" secondItem="58" secondAttribute="centerY" id="121"/>
+                <constraint firstItem="26" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="43" id="194"/>
+                <constraint firstAttribute="bottom" secondItem="195" secondAttribute="bottom" constant="20" symbolic="YES" id="200"/>
+                <constraint firstItem="58" firstAttribute="trailing" secondItem="50" secondAttribute="trailing" id="213"/>
+                <constraint firstAttribute="trailing" secondItem="195" secondAttribute="trailing" constant="28" id="216"/>
+                <constraint firstItem="217" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="260" id="218"/>
+                <constraint firstAttribute="bottom" secondItem="217" secondAttribute="bottom" constant="20" symbolic="YES" id="219"/>
+                <constraint firstAttribute="bottom" secondItem="221" secondAttribute="bottom" constant="20" symbolic="YES" id="222"/>
+                <constraint firstItem="221" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="28" id="223"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_iPad.png" width="159" height="48"/>
+        <image name="background_iPad.png" width="768" height="1004"/>
+        <image name="overlay5_iPad.png" width="768" height="1004"/>
+    </resources>
+</document>
