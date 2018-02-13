@@ -207,7 +207,7 @@
       CGSize sizeView  = imagePhoto.bounds.size;
       float  fpScale;
       
-      if (abs(sizePhoto.width - sizeView.width) < abs(sizePhoto.height - sizeView.height))
+      if (fabs(sizePhoto.width - sizeView.width) < fabs(sizePhoto.height - sizeView.height))
       {
          fpScale = sizeView.width / sizePhoto.width;
       }
