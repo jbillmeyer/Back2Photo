@@ -34,19 +34,19 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="22">
+                <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" ambiguous="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="22">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                     <accessibility key="accessibilityConfiguration">
                         <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                     </accessibility>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="54">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="450"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="468"/>
                     <constraints>
                         <constraint firstAttribute="height" priority="1" constant="450" id="135"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" image="overlay5.png" translatesAutoresizingMaskIntoConstraints="NO" id="27">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1" verticalCompressionResistancePriority="1" ambiguous="YES" image="overlay5.png" translatesAutoresizingMaskIntoConstraints="NO" id="27">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                 </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To Close for GPS Accuracy" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="234">
@@ -70,11 +70,12 @@
                     <size key="shadowOffset" width="2" height="2"/>
                 </label>
                 <button opaque="NO" alpha="0.019999999552965164" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89">
-                    <rect key="frame" x="0.0" y="1" width="375" height="448"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="468"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="448" id="158"/>
+                        <constraint firstAttribute="height" constant="468" id="158"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="12" maxX="0.0" maxY="0.0"/>
                     <state key="normal">
                         <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
@@ -86,7 +87,7 @@
                     </connections>
                 </button>
                 <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="arrow.png" translatesAutoresizingMaskIntoConstraints="NO" id="185">
-                    <rect key="frame" x="11" y="574" width="80" height="80"/>
+                    <rect key="frame" x="11" y="573" width="80" height="82"/>
                 </imageView>
                 <button opaque="NO" alpha="0.019999999552965164" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="219">
                     <rect key="frame" x="104" y="569" width="206" height="90"/>
@@ -128,7 +129,6 @@
             </subviews>
             <color key="backgroundColor" red="0.75" green="0.75" blue="0.75" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="22" firstAttribute="top" secondItem="6" secondAttribute="top" id="25"/>
                 <constraint firstItem="22" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="26"/>
                 <constraint firstAttribute="trailing" secondItem="67" secondAttribute="trailing" constant="20" symbolic="YES" id="73"/>
                 <constraint firstItem="27" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="84"/>
@@ -137,9 +137,8 @@
                 <constraint firstItem="54" firstAttribute="top" secondItem="6" secondAttribute="top" id="130"/>
                 <constraint firstItem="54" firstAttribute="trailing" secondItem="6" secondAttribute="trailing" id="133"/>
                 <constraint firstItem="54" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="134"/>
-                <constraint firstItem="27" firstAttribute="top" secondItem="6" secondAttribute="top" id="168"/>
                 <constraint firstItem="89" firstAttribute="centerY" secondItem="54" secondAttribute="centerY" id="170"/>
-                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="185" secondAttribute="bottom" priority="500" constant="32" id="186"/>
+                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="185" secondAttribute="bottom" priority="500" constant="12" id="186"/>
                 <constraint firstItem="185" firstAttribute="leading" relation="lessThanOrEqual" secondItem="6" secondAttribute="leading" priority="500" constant="22" id="187"/>
                 <constraint firstItem="219" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="104" id="228"/>
                 <constraint firstItem="219" firstAttribute="centerY" secondItem="67" secondAttribute="centerY" id="229"/>
@@ -154,11 +153,13 @@
                 <constraint firstItem="185" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="11" id="295"/>
                 <constraint firstItem="285" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="15" id="305"/>
                 <constraint firstItem="276" firstAttribute="leading" secondItem="6" secondAttribute="leading" constant="110" id="306"/>
+                <constraint firstItem="89" firstAttribute="top" secondItem="6" secondAttribute="top" id="1H7-cz-v2G"/>
             </constraints>
         </view>
         <navigationController definesPresentationContext="YES" id="214">
             <extendedEdge key="edgesForExtendedLayout"/>
             <navigationBar key="navigationBar" contentMode="scaleToFill" id="215">
+                <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                 <autoresizingMask key="autoresizingMask"/>
             </navigationBar>
             <viewControllers>
@@ -171,7 +172,7 @@
     </objects>
     <resources>
         <image name="arrow.png" width="80" height="80"/>
-        <image name="background.png" width="320" height="548"/>
-        <image name="overlay5.png" width="320" height="548"/>
+        <image name="background.png" width="320" height="568"/>
+        <image name="overlay5.png" width="320" height="568"/>
     </resources>
 </document>

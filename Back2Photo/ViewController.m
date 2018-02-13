@@ -76,7 +76,7 @@
    }
    else
    {
-      imageDirection = [[UIImageView alloc] initWithFrame: CGRectMake(11.0f, 368.0f,
+      imageDirection = [[UIImageView alloc] initWithFrame: CGRectMake(11.0f, 388.0f,
                                                                       imageDirection.bounds.size.width,
                                                                       imageDirection.bounds.size.height)];
       imageDirection.image = [UIImage imageNamed: @"arrow.png"];
