@@ -455,7 +455,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Back2Photo/Back2Photo-Prefix.pch";
 				INFOPLIST_FILE = "Back2Photo/Back2Photo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softsolutions.us.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_PNG_TEXT = YES;
 				WRAPPER_EXTENSION = app;
@@ -470,7 +470,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Back2Photo/Back2Photo-Prefix.pch";
 				INFOPLIST_FILE = "Back2Photo/Back2Photo-Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.softsolutions.us.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = "${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_PNG_TEXT = YES;
 				WRAPPER_EXTENSION = app;
