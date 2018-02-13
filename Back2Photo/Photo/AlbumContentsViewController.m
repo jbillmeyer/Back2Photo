@@ -52,6 +52,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+   [super viewDidAppear:<#animated#>];
+   
    if (lastSelectedRow != NSNotFound)
    {
       NSIndexPath *selectedIndexPath = [NSIndexPath indexPathForRow:lastSelectedRow inSection:0];
@@ -102,7 +104,7 @@
    if (assets.count <= firstPhotoInCell)
    {
       NSLog(@"We are out of range, asking to start with photo %lu but we only have %lu", (unsigned long)firstPhotoInCell, (unsigned long)assets.count);
-      return nil;
+      return (UITableViewCell *) nil;
    }
    
    NSUInteger currentPhotoIndex = 0;
@@ -160,6 +162,7 @@
 
 - (void)viewDidUnload
 {
+   [super viewDidUnload];
 }
 
 @end
