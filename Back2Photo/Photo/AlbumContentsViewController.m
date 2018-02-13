@@ -15,6 +15,7 @@
 
 - (void)awakeFromNib
 {
+   [super awakeFromNib];
    lastSelectedRow = NSNotFound;
 }
 
@@ -100,7 +101,7 @@
    
    if (assets.count <= firstPhotoInCell)
    {
-      NSLog(@"We are out of range, asking to start with photo %lu but we only have %d", (unsigned long)firstPhotoInCell, assets.count);
+      NSLog(@"We are out of range, asking to start with photo %lu but we only have %lu", (unsigned long)firstPhotoInCell, (unsigned long)assets.count);
       return nil;
    }
    

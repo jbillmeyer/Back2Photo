@@ -22,7 +22,7 @@
    
    UIBarButtonItem *btnCancel = [[UIBarButtonItem alloc]
                                  initWithTitle: @"Cancel"
-                                 style:         UIBarButtonItemStyleBordered
+                                 style:         UIBarButtonItemStylePlain
                                  target:        self
                                  action:        @selector(btnPressedBack)];
    self.navigationItem.rightBarButtonItem = btnCancel;

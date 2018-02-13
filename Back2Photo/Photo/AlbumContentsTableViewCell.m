@@ -61,31 +61,38 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
 }
 
 
-- (void)awakeFromNib {
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
-    photo1.delegate = self;
-    photo2.delegate = self;
-    photo3.delegate = self;
-    photo4.delegate = self;
+- (void)awakeFromNib
+{
+   [super awakeFromNib];
+   self.selectionStyle = UITableViewCellSelectionStyleNone;
+   photo1.delegate = self;
+   photo2.delegate = self;
+   photo3.delegate = self;
+   photo4.delegate = self;
 }
 
-- (UIImageView *)photo1 {
+- (UIImageView *)photo1
+{
     return photo1;
 }
 
-- (UIImageView *)photo2 {
+- (UIImageView *)photo2
+{
     return photo2;
 }
 
-- (UIImageView *)photo3 {
+- (UIImageView *)photo3
+{
     return photo3;
 }
 
-- (UIImageView *)photo4 {
+- (UIImageView *)photo4
+{
     return photo4;
 }
 
-- (void)clearSelection {
+- (void)clearSelection
+{
     [photo1 clearSelection];
     [photo2 clearSelection];
     [photo3 clearSelection];
