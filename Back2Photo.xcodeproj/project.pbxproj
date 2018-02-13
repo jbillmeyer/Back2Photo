@@ -264,6 +264,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "SoftSolutions, Inc.";
+				TargetAttributes = {
+					B8592A4216DC158000156566 = {
+						DevelopmentTeam = MAZXM9A758;
+					};
+				};
 			};
 			buildConfigurationList = B8592A3E16DC158000156566 /* Build configuration list for PBXProject "Back2Photo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -428,6 +433,7 @@
 		B8592A6A16DC158100156566 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = MAZXM9A758;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Back2Photo/Back2Photo-Prefix.pch";
 				INFOPLIST_FILE = "Back2Photo/Back2Photo-Info.plist";
@@ -439,6 +445,7 @@
 		B8592A6B16DC158100156566 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				DEVELOPMENT_TEAM = MAZXM9A758;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Back2Photo/Back2Photo-Prefix.pch";
 				INFOPLIST_FILE = "Back2Photo/Back2Photo-Info.plist";
