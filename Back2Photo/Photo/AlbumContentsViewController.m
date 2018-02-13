@@ -52,7 +52,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-   [super viewDidAppear:<#animated#>];
+   [super viewDidAppear:true];
    
    if (lastSelectedRow != NSNotFound)
    {
@@ -160,7 +160,7 @@
    [super didReceiveMemoryWarning];
 }
 
-- (void)viewDidUnload
+- (void)viewDidUnload 
 {
    [super viewDidUnload];
 }
