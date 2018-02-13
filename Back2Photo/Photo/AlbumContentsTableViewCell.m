@@ -91,7 +91,7 @@ Copyright (C) 2011 Apple Inc. All Rights Reserved.
     return photo4;
 }
 
-- (void)clearSelection
+- (void)clearSelection 
 {
     [photo1 clearSelection];
     [photo2 clearSelection];
