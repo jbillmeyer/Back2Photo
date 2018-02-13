@@ -104,7 +104,7 @@
    if (assets.count <= firstPhotoInCell)
    {
       NSLog(@"We are out of range, asking to start with photo %lu but we only have %lu", (unsigned long)firstPhotoInCell, (unsigned long)assets.count);
-      return (UITableViewCell *) nil;
+      return cell;
    }
    
    NSUInteger currentPhotoIndex = 0;
