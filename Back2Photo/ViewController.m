@@ -66,7 +66,7 @@
    [fmtNumber setNumberStyle:NSNumberFormatterDecimalStyle];
    [fmtNumber setMaximumFractionDigits: 0];
    [fmtNumber setMinimumFractionDigits: 0];
-
+/*
    if (fpHeight == 1024)
    {
       imageDirection = [[UIImageView alloc] initWithFrame: CGRectMake(43.0f, 880.0f,
@@ -82,7 +82,7 @@
       imageDirection.image = [UIImage imageNamed: @"arrow.png"];
    }
    [self.view addSubview: imageDirection];
-   
+*/
    NSLocale *locale = [NSLocale currentLocale];
    fMetric = [[locale objectForKey:NSLocaleUsesMetricSystem] boolValue];
    
