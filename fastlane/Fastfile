@@ -1,0 +1,70 @@
+### Fastfile ###
+fastlane_version "1.107.0" # Minimum required fastlane version. Find your version with: gem list fastlane"
+default_platform :ios
+platform :ios do
+  ########## Before ##########
+  before_all do
+      update_fastlane
+      reset_git_repo(force: true) # Ensure that no artifacts are left when you build the app.
+      ensure_git_status_clean
+      git_pull
+      increment_build_number({
+        build_number: latest_testflight_build_number(
+          initial_build_number: 0, # Sets the build number to given value if no matching uploaded build is found
+          app_identifier: 'MY.BUNDLE.ID1.STAGING' # One of our app targets gets to be the guide for build versions. It is expected to be always uploaded first.
+        ) + 1,
+      })
+  end
+  before_each do
+      clean_build_artifacts
+      clear_derived_data
+  end
+
+  ########## On Error ##########
+  error do |lane, exception|
+      reset_git_repo(force: true)
+  end
+
+  ########## Lanes ##########
+  desc "Deploy all versions of the app"
+  lane :all do    # This is a convenience lane that executes all other lanes
+      MY_SCHEME1
+      MY_SCHEME2
+  end
+
+  desc "Deploy MY_SCHEME1"    # Lane for app target 1
+  lane :MY_SCHEME1 do     
+      gym(
+        scheme: "MY_SCHEME1",
+      )
+      testflight(
+        skip_submission: false,
+        distribute_external: false,
+        app_identifier: "MY.BUNDLE.ID1.STAGING"
+      )
+  end
+
+  desc "Deploy MY_SCHEME2"   # Lane for app target 2
+  lane :MY_SCHEME2 do
+      gym(
+        scheme: "MY_SCHEME2",
+      )
+      testflight(
+        skip_submission: false,  # Refers to submission for external testing (not App Store)
+        distribute_external: false,
+        app_identifier: "MY.BUNDLE.ID1.LIVE"
+      )
+  end
+
+  ########## After ##########
+  after_all do
+      clean_build_artifacts
+      clear_derived_data
+      commit_version_bump(
+        message: "Bumping Build Number to: " + Actions.lane_context[SharedValues::BUILD_NUMBER], # create a commit with a custom message
+        xcodeproj: "../MY_PROJECT_FOLDER/MY_PROJECT.xcodeproj", # optional, if you have multiple Xcode project files, you must specify your main project here
+      )
+      add_git_tag tag: Actions.lane_context[SharedValues::BUILD_NUMBER]
+      push_to_git_remote
+  end
+end

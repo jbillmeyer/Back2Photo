@@ -1,0 +1,15 @@
+### Appfile ###
+team_name "MY_TEAM_NAME"
+team_id "MY_TEAM_ID"
+for_platform :ios do
+  for_lane :MY_SCHEME1 do
+      apple_id MY_APPLE_ID1_STAGING
+      app_identifier "MY.BUNDLE.ID1.STAGING"
+  end
+  for_lane :MY_SCHEME2 do
+      apple_id MY_APPLE_ID1_LIVE
+      app_identifier "MY.BUNDLE.ID1.LIVE"
+  end
+end
+apple_dev_portal_id "MY_DEV_PORTAL_EMAIL"  # Your Apple email address
+itunes_connect_id "MY_ITC_EMAIL" # Your iTunes Connect email address
