@@ -93,7 +93,7 @@
 - (void) viewDidLayoutSubviews
 {
    [super viewDidLayoutSubviews];
-   
+/*
    float fpHeight = [[UIScreen mainScreen] bounds].size.height;
    
    if (fpHeight == 480)
@@ -111,6 +111,7 @@
       CGPoint pt = imageDirection.center;
       imageDirection.center = CGPointMake(pt.x, pt.y + 88);
    }
+*/
 }
 
 
